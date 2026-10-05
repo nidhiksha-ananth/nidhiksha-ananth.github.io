@@ -1,214 +1,1358 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>nidhikshashetty@gmail.com</title>
-<title>+91-99165-22338</title>
-<title>https://github.com/nidhiksha-ananth</title>
-<title>Cloud & DevOps Portfolio</title>
-<style>
-:root{color-scheme:light dark;--bg:light-dark(#f6f8fb,#0b1220);--surface:light-dark(#fff,#111827);--text:light-dark(#111827,#f3f4f6);--muted:light-dark(#5b6472,#aab3c2);--line:light-dark(#e3e8ef,#263244);--accent:light-dark(#2563eb,#60a5fa);--chip:light-dark(#eef4ff,#172554)}
-*{box-sizing:border-box}
-body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-.root{min-height:100vh;background:var(--bg)}
-.wrap{max-width:1050px;margin:auto;padding:28px 22px 70px}
-.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:72px}
-.brand{font-weight:800;letter-spacing:.04em}
-.links a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.92rem}
-.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:45px;align-items:center;margin-bottom:95px}
-.eyebrow{color:var(--accent);font-weight:750;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
-.hero h1{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.055em}
-.hero h1 span{color:var(--accent)}
-.lead{font-size:1.15rem;color:var(--muted);max-width:680px}
-.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-block;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid var(--line);color:var(--text)}
-.primary{background:var(--accent);color:white;border-color:var(--accent)}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
-.stat{padding:16px 0;border-bottom:1px solid var(--line)}
-.stat:last-child{border:0}
-.stat b{display:block;font-size:1.35rem}
-.stat small{color:var(--muted)}
-section{margin:80px 0}
-h2{font-size:2rem;letter-spacing:-.03em;margin:0 0 25px}
-.section-intro{color:var(--muted);max-width:700px}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
-.card h3{margin:0 0 8px;font-size:1.2rem}
-.card p{color:var(--muted);margin:8px 0 16px}
-.chips{display:flex;gap:8px;flex-wrap:wrap}
-.chip{background:var(--chip);color:var(--text);padding:5px 9px;border-radius:999px;font-size:.78rem}
-.timeline{border-left:2px solid var(--line);padding-left:24px}
-.timeline h3{margin-bottom:3px}
-.timeline p{color:var(--muted)}
-.footer{border-top:1px solid var(--line);padding-top:28px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:760px){
-.hero{grid-template-columns:1fr;margin-bottom:65px}
-.grid{grid-template-columns:1fr}
-.nav{margin-bottom:45px}
-.links a{margin-left:10px}
-.links a:nth-child(1){display:none}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Nidhiksha A - Cloud and Systems Engineering portfolio. AWS, Terraform, Kubernetes, GitOps, CI/CD and IT Support."
+  >
+
+  <title>Nidhiksha A | Cloud & Systems Engineering</title>
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-secondary: #0b1728;
+      --card: #0f1d30;
+      --card-hover: #13243a;
+      --text: #f4f7fb;
+      --muted: #a7b4c7;
+      --accent: #55a8ff;
+      --accent-dark: #237bd1;
+      --border: #20334c;
+      --tag: #122b47;
+      --white: #ffffff;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* NAVBAR */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 17, 31, 0.9);
+      border-bottom: 1px solid rgba(32, 51, 76, 0.7);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.92rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 105px 0 90px;
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-description {
+      color: var(--muted);
+      max-width: 720px;
+      font-size: 1.12rem;
+    }
+
+    .hero-contact {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 18px;
+      border-radius: 9px;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      border-color: var(--accent);
+    }
+
+    .button-primary {
+      background: var(--accent);
+      color: #04101e;
+      border-color: var(--accent);
+    }
+
+    .button-primary:hover {
+      background: #7bbdff;
+      color: #04101e;
+    }
+
+    .hero-card {
+      background: linear-gradient(
+        145deg,
+        rgba(15, 29, 48, 0.95),
+        rgba(11, 23, 40, 0.95)
+      );
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat {
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stat:last-child {
+      border-bottom: none;
+    }
+
+    .stat-number {
+      display: block;
+      color: var(--white);
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    /* SECTIONS */
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    .section-label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      font-size: 0.75rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .section-intro {
+      color: var(--muted);
+      max-width: 780px;
+      margin-top: 15px;
+    }
+
+    /* ABOUT */
+
+    .about-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-box p {
+      color: var(--muted);
+      font-size: 1.03rem;
+    }
+
+    /* PROJECTS */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .project-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 27px;
+      transition: 0.25s ease;
+    }
+
+    .project-card:hover {
+      background: var(--card-hover);
+      border-color: #315276;
+      transform: translateY(-4px);
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+    }
+
+    .project-card h3 {
+      font-size: 1.35rem;
+      margin: 8px 0 13px;
+    }
+
+    .project-card p {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      background: var(--tag);
+      border: 1px solid #1d4167;
+      color: #d9eaff;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.73rem;
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .skill-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    .skill-card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    /* EXPERIENCE */
+
+    .experience-card {
+      border-left: 3px solid var(--accent);
+      background: var(--card);
+      border-radius: 0 18px 18px 0;
+      padding: 30px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .experience-header h3 {
+      font-size: 1.3rem;
+    }
+
+    .experience-date {
+      color: var(--accent);
+      white-space: nowrap;
+      font-size: 0.9rem;
+    }
+
+    .company {
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .metric {
+      background: var(--tag);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      color: var(--white);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .experience-list {
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .experience-list li {
+      margin-bottom: 10px;
+    }
+
+    /* CERTIFICATIONS */
+
+    .credentials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .credential {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .credential h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+
+    .credential p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .credential a {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.85rem;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(85, 168, 255, 0.12),
+          transparent 55%
+        ),
+        var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 55px 25px;
+    }
+
+    .contact-box h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      letter-spacing: -0.04em;
+    }
+
+    .contact-box p {
+      color: var(--muted);
+      max-width: 650px;
+      margin: 15px auto 0;
+    }
+
+    .contact-links {
+      justify-content: center;
+    }
+
+    /* FOOTER */
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card.featured {
+        grid-column: span 1;
+      }
+
+      .credentials-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        min-height: 64px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.7rem, 15vw, 4.5rem);
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-header {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .experience-date {
+        white-space: normal;
+      }
+
+      .about-box,
+      .project-card,
+      .skill-card,
+      .experience-card {
+        padding: 22px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-<div class="root">
-<main class="wrap">
 
-<nav class="nav">
-<div class="brand">CLOUD / DEVOPS</div>
-<div class="links">
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-</div>
-</nav>
+  <!-- NAVIGATION -->
 
-<section class="hero">
-<div>
-<div class="eyebrow">IT Support → Cloud Infrastructure & DevOps</div>
-<h1>Building reliable <span>AWS</span> infrastructure.</h1>
-<p class="lead">IT Support Engineer with 3 years of enterprise production-support experience, now building hands-on AWS, Kubernetes, Terraform, CI/CD and GitOps solutions.</p>
+  <nav>
+    <div class="container nav-inner">
 
-<div class="buttons">
-<a class="btn primary" href="https://github.com/nidhiksha-ananth" target="_blank">GitHub</a>
-<a class="btn" href="https://www.linkedin.com/in/nidhiksha-a-991a53220/" target="_blank">LinkedIn</a>
-</div>
-</div>
+      <a class="logo" href="#">
+        NIDHIKSHA<span>.</span>
+      </a>
 
-<div class="panel">
-<div class="stat"><b>3 years</b><small>Enterprise production support</small></div>
-<div class="stat"><b>AZ-104</b><small>Azure Administrator Associate</small></div>
-<div class="stat"><b>54%</b><small>Daily runtime reduction in cost project</small></div>
-<div class="stat"><b>AWS + EKS</b><small>Hands-on cloud & DevOps projects</small></div>
-</div>
-</section>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-<section id="projects">
-<h2>Featured projects</h2>
-<p class="section-intro">Projects focused on infrastructure automation, deployment reliability, high availability and operational efficiency.</p>
+    </div>
+  </nav>
 
-<div class="grid">
 
-<article class="card">
-<h3>Self-Healing GitOps Platform on AWS EKS</h3>
-<p>Built a production-style Kubernetes platform with Terraform, GitHub Actions and ArgoCD. Added container security scanning, autoscaling, observability and automated recovery. Tested Git drift correction and pod recovery.</p>
+  <!-- HERO -->
 
-<div class="chips">
-<span class="chip">AWS EKS</span>
-<span class="chip">Terraform</span>
-<span class="chip">ArgoCD</span>
-<span class="chip">GitHub Actions</span>
-<span class="chip">Prometheus</span>
-<span class="chip">Grafana</span>
-</div>
+  <header class="container hero">
 
-<p><a href="https://github.com/nidhiksha-ananth/self-healing-gitops-eks-platform" target="_blank">View repository →</a></p>
-</article>
+    <div>
 
-<article class="card">
-<h3>Highly Available AWS Infrastructure</h3>
-<p>Designed multi-AZ AWS infrastructure with modular Terraform: VPC, public/private subnets, NAT Gateways, ALB, EC2 Auto Scaling and PostgreSQL RDS. Used GitHub OIDC and separate IAM roles for secure CI/CD.</p>
+      <div class="eyebrow">
+        Cloud & Systems Engineering
+      </div>
 
-<div class="chips">
-<span class="chip">AWS</span>
-<span class="chip">Terraform</span>
-<span class="chip">VPC</span>
-<span class="chip">ALB</span>
-<span class="chip">Auto Scaling</span>
-<span class="chip">RDS</span>
-</div>
+      <h1>
+        Building reliable
+        <span>AWS</span>
+        systems.
+      </h1>
 
-<p><a href="https://github.com/nidhiksha-ananth/highly-available-aws-infrastructure" target="_blank">View repository →</a></p>
-</article>
+      <p class="hero-description">
+        IT support professional with 3 years of experience at NTT DATA
+        supporting MetLife end users across identity, devices,
+        collaboration and networking, now transitioning into cloud and
+        systems engineering through hands-on AWS, Terraform, Kubernetes
+        and GitOps projects.
+      </p>
 
-<article class="card">
-<h3>EC2 Cost Optimization</h3>
-<p>Built an automation solution for opted-in non-production EC2 instances that reduced daily running hours by 54%, demonstrating practical cloud cost-management thinking.</p>
+      <div class="buttons">
 
-<div class="chips">
-<span class="chip">AWS</span>
-<span class="chip">EC2</span>
-<span class="chip">Automation</span>
-<span class="chip">Cost Optimization</span>
-</div>
+        <a
+          class="button button-primary"
+          href="mailto:nidhikshashetty@gmail.com"
+        >
+          Email Me
+        </a>
 
-<p><a href="https://github.com/nidhiksha-ananth/aws-cost-optimizer" target="_blank">View repository →</a></p>
-</article>
+        <!-- Upload Nidhiksha_A_Resume.pdf to the same repository -->
+        <a
+          class="button"
+          href="Nidhiksha_A_Resume.pdf"
+          download
+        >
+          Download Resume
+        </a>
 
-</div>
-</section>
+        <a
+          class="button"
+          href="https://github.com/nidhiksha-ananth"
+          target="_blank"
+          rel="noopener"
+        >
+          GitHub
+        </a>
 
-<section id="skills">
-<h2>Technical toolkit</h2>
+        <a
+          class="button"
+          href="https://www.linkedin.com/in/nidhiksha-a-991a53220/"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn
+        </a>
 
-<div class="chips">
-<span class="chip">AWS</span>
-<span class="chip">Kubernetes</span>
-<span class="chip">Terraform</span>
-<span class="chip">EKS</span>
-<span class="chip">EC2</span>
-<span class="chip">VPC</span>
-<span class="chip">IAM</span>
-<span class="chip">RDS</span>
-<span class="chip">ALB</span>
-<span class="chip">CloudWatch</span>
-<span class="chip">Docker</span>
-<span class="chip">GitHub Actions</span>
-<span class="chip">ArgoCD</span>
-<span class="chip">GitOps</span>
-<span class="chip">CI/CD</span>
-<span class="chip">Prometheus</span>
-<span class="chip">Grafana</span>
-<span class="chip">Linux</span>
-<span class="chip">Bash</span>
-<span class="chip">Python</span>
-<span class="chip">Networking</span>
-<span class="chip">Production Support</span>
-<span class="chip">ServiceNow</span>
-<span class="chip">Active Directory</span>
-</div>
-</section>
+        <a
+          class="button"
+          href="tel:+919916522338"
+        >
+          Call
+        </a>
 
-<section id="experience">
-<h2>Experience</h2>
+      </div>
 
-<div class="timeline">
-<h3>Service Desk Support · NTT DATA</h3>
-<p>3 years · Enterprise production support</p>
+      <p class="hero-contact">
+        +91 99165 22338 ·
+        nidhikshashetty@gmail.com ·
+        Bengaluru, Karnataka
+      </p>
 
-<p>Handled P1/P2 incidents, TCP/IP, DNS, VPN and application connectivity troubleshooting, Active Directory and access issues, and Azure identity/access processes including Temporary Access Pass and Microsoft Authenticator setup. Collaborated with infrastructure, network, cloud, application and security teams while documenting incidents and supporting root-cause analysis.</p>
-</div>
-</section>
+    </div>
 
-<section>
-<h2>Certifications & direction</h2>
 
-<div class="grid">
+    <aside class="hero-card">
 
-<div class="card">
-<h3>Microsoft Certified: Azure Administrator Associate</h3>
-<p>AZ-104</p>
-<p><a href="https://learn.microsoft.com/en-us/users/nidhikshaa-9058/credentials/certification/azure-administrator?tab=credentials-tab&source=docs" target="_blank">View credential →</a></p>
-</div>
+      <div class="stat">
+        <span class="stat-number">3 years</span>
+        <span class="stat-label">
+          Enterprise IT support at NTT DATA
+        </span>
+      </div>
 
-<div class="card">
-<h3>AWS Solutions Architect – Associate</h3>
-<p>Currently preparing for SAA-C03</p>
-</div>
+      <div class="stat">
+        <span class="stat-number">98.3%</span>
+        <span class="stat-label">
+          SLA compliance · 250–300 tickets/month
+        </span>
+      </div>
 
-</div>
+      <div class="stat">
+        <span class="stat-number">AZ-104</span>
+        <span class="stat-label">
+          Microsoft Azure Administrator Associate
+        </span>
+      </div>
 
-<p class="section-intro" style="margin-top:20px">Open to Cloud Support Engineer, AWS Cloud Engineer, Cloud Infrastructure Engineer, Junior DevOps and Platform Engineering opportunities.</p>
-</section>
+      <div class="stat">
+        <span class="stat-number">AWS + EKS</span>
+        <span class="stat-label">
+          Hands-on cloud infrastructure projects
+        </span>
+      </div>
 
-<footer class="footer">
-<span>Built around cloud infrastructure, automation and reliability.</span>
-<span>© 2026 Cloud / DevOps Portfolio</span>
-</footer>
+    </aside>
 
-</main>
-</div>
+  </header>
+
+
+  <main>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            About
+          </div>
+
+          <h2>
+            From production support to cloud engineering.
+          </h2>
+
+        </div>
+
+        <div class="about-box">
+
+          <p>
+            I am an IT support professional with 3 years of experience
+            at NTT DATA supporting MetLife end users across identity,
+            endpoint, collaboration and network-related issues.
+          </p>
+
+          <br>
+
+          <p>
+            My production-support experience has strengthened my
+            troubleshooting, incident management, root-cause analysis,
+            SLA management and operational discipline. Alongside my
+            professional role, I have built hands-on AWS infrastructure
+            projects using Terraform, Kubernetes, GitHub Actions and
+            ArgoCD.
+          </p>
+
+          <br>
+
+          <p>
+            I am now seeking opportunities in Cloud Support,
+            Systems Engineering, Sysadmin, Cloud Infrastructure,
+            Junior DevOps and Platform Engineering.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Projects
+          </div>
+
+          <h2>
+            Infrastructure I have built.
+          </h2>
+
+          <p class="section-intro">
+            Hands-on projects focused on AWS infrastructure,
+            automation, Kubernetes, GitOps, observability,
+            availability and operational reliability.
+          </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+          <!-- PROJECT 1 -->
+
+          <article class="project-card featured">
+
+            <div class="project-number">
+              PROJECT 01
+            </div>
+
+            <h3>
+              Self-Healing GitOps Deployment Pipeline on AWS EKS
+            </h3>
+
+            <p>
+              Built a highly available 2-AZ AWS environment using
+              Terraform and deployed a Kubernetes platform on Amazon
+              EKS. GitHub Actions handles testing, container builds,
+              Trivy security scanning and ECR publishing.
+            </p>
+
+            <p>
+              ArgoCD provides GitOps-based deployment, rollback and
+              drift correction. Implemented Kubernetes self-healing,
+              HPA-based scaling and Prometheus/Grafana monitoring.
+              Troubleshot failures layer by layer, including a
+              compromised CI dependency and malformed manifest
+              synchronization failure.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">EKS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">Kubernetes</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">ArgoCD</span>
+              <span class="tag">GitOps</span>
+              <span class="tag">ECR</span>
+              <span class="tag">Trivy</span>
+              <span class="tag">Prometheus</span>
+              <span class="tag">Grafana</span>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://github.com/nidhiksha-ananth/self-healing-gitops-eks-platform"
+              target="_blank"
+              rel="noopener"
+            >
+              View GitHub Repository →
+            </a>
+
+          </article>
+
+
+          <!-- PROJECT 2 -->
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 02
+            </div>
+
+            <h3>
+              Highly Available AWS Infrastructure with Terraform
+            </h3>
+
+            <p>
+              Designed and provisioned a three-tier AWS architecture
+              across two Availability Zones with six subnets,
+              two NAT gateways, an Application Load Balancer,
+              Auto Scaling and PostgreSQL RDS.
+            </p>
+
+            <p>
+              Implemented modular Terraform, remote S3 state,
+              state locking, GitHub OIDC and separate CI/deployment
+              IAM roles. Added chained security groups, target
+              tracking and CloudWatch monitoring.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">Terraform</span>
+              <span class="tag">VPC</span>
+              <span class="tag">ALB</span>
+              <span class="tag">EC2</span>
+              <span class="tag">Auto Scaling</span>
+              <span class="tag">RDS</span>
+              <span class="tag">IAM</span>
+              <span class="tag">CloudWatch</span>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://github.com/nidhiksha-ananth/highly-available-aws-infrastructure"
+              target="_blank"
+              rel="noopener"
+            >
+              View GitHub Repository →
+            </a>
+
+          </article>
+
+
+          <!-- PROJECT 3 -->
+
+          <article class="project-card">
+
+            <div class="project-number">
+              PROJECT 03
+            </div>
+
+            <h3>
+              AWS Cost Optimizer
+            </h3>
+
+            <p>
+              Built a serverless AWS cost-optimization solution for
+              opted-in non-production EC2 instances, reducing daily
+              running hours by 54%.
+            </p>
+
+            <p>
+              The project demonstrates practical cloud cost-management
+              thinking by automating the runtime of non-production
+              infrastructure.
+            </p>
+
+            <div class="tags">
+              <span class="tag">AWS</span>
+              <span class="tag">EC2</span>
+              <span class="tag">Automation</span>
+              <span class="tag">Cost Optimization</span>
+            </div>
+
+            <a
+              class="project-link"
+              href="https://github.com/nidhiksha-ananth/aws-cost-optimizer"
+              target="_blank"
+              rel="noopener"
+            >
+              View GitHub Repository →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Technical Skills
+          </div>
+
+          <h2>
+            Tools I work with.
+          </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+          <article class="skill-card">
+
+            <h3>
+              Cloud & Infrastructure
+            </h3>
+
+            <p>
+              AWS VPC, EC2, ALB, Auto Scaling, EKS, ECR,
+              IAM, S3, RDS PostgreSQL, CloudWatch, Lambda,
+              EventBridge, SNS and AWS Budgets.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Infrastructure as Code & CI/CD
+            </h3>
+
+            <p>
+              Terraform, Terraform modules, remote state,
+              GitHub Actions, GitHub OIDC, ArgoCD, GitOps
+              and Trivy.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Containers
+            </h3>
+
+            <p>
+              Kubernetes, Amazon EKS, Docker, HPA,
+              containerized application deployment and
+              Kubernetes troubleshooting.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Linux & Networking
+            </h3>
+
+            <p>
+              Amazon Linux, Ubuntu basics, SSH, users and
+              permissions, systemd services, log analysis,
+              TCP/IP, DNS and VPC networking.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Identity & Endpoint
+            </h3>
+
+            <p>
+              Active Directory, Microsoft Entra ID, MFA,
+              Temporary Access Pass, Microsoft Intune and
+              Microsoft 365.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              ITSM & Monitoring
+            </h3>
+
+            <p>
+              ServiceNow, Nexthink, Zscaler, incident
+              management, SLA adherence, RCA, Prometheus,
+              Grafana and CloudWatch.
+            </p>
+
+          </article>
+
+
+          <article class="skill-card">
+
+            <h3>
+              Scripting
+            </h3>
+
+            <p>
+              Python and Bash for automation, troubleshooting
+              and operational tasks.
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Experience
+          </div>
+
+          <h2>
+            Production support experience.
+          </h2>
+
+        </div>
+
+
+        <article class="experience-card">
+
+          <div class="experience-header">
+
+            <div>
+
+              <h3>
+                Services IT Development Program Senior Associate II
+              </h3>
+
+              <p class="company">
+                NTT DATA · Supporting MetLife end users
+              </p>
+
+            </div>
+
+            <div class="experience-date">
+              Oct 2023 – Present
+            </div>
+
+          </div>
+
+
+          <div class="metrics">
+
+            <span class="metric">
+              250–300 tickets/month
+            </span>
+
+            <span class="metric">
+              98.3% SLA compliance
+            </span>
+
+            <span class="metric">
+              ServiceNow
+            </span>
+
+            <span class="metric">
+              Enterprise IT Support
+            </span>
+
+          </div>
+
+
+          <ul class="experience-list">
+
+            <li>
+              Supported MetLife end users through ServiceNow,
+              handling approximately 250–300 tickets per month
+              while maintaining 98.3% SLA compliance.
+            </li>
+
+            <li>
+              Performed Active Directory password resets,
+              account unlocks, enable/disable actions and
+              group-membership checks.
+            </li>
+
+            <li>
+              Supported MFA setup through the Azure portal and
+              generated Temporary Access Passes for sign-in
+              lockout recovery.
+            </li>
+
+            <li>
+              Managed Microsoft Intune device enrollment and
+              assignment activities.
+            </li>
+
+            <li>
+              Used Nexthink remote actions to troubleshoot
+              laptop performance issues and low disk space.
+            </li>
+
+            <li>
+              Troubleshot Outlook, Microsoft Teams, Zscaler
+              connectivity and MetLife business applications.
+            </li>
+
+            <li>
+              Applied incident management, SLA adherence,
+              root-cause analysis and knowledge-base
+              documentation practices.
+            </li>
+
+          </ul>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- CERTIFICATIONS -->
+
+    <section id="certifications">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-label">
+            Credentials
+          </div>
+
+          <h2>
+            Certifications & education.
+          </h2>
+
+        </div>
+
+
+        <div class="credentials-grid">
+
+
+          <article class="credential">
+
+            <h3>
+              Microsoft Azure Administrator Associate
+            </h3>
+
+            <p>
+              AZ-104
+            </p>
+
+            <a
+              href="https://learn.microsoft.com/en-us/users/nidhikshaa-9058/credentials/certification/azure-administrator?tab=credentials-tab&source=docs"
+              target="_blank"
+              rel="noopener"
+            >
+              View Credential →
+            </a>
+
+          </article>
+
+
+          <article class="credential">
+
+            <h3>
+              AWS Certified Solutions Architect – Associate
+            </h3>
+
+            <p>
+              Certification in progress.
+              Exam scheduled for November 2026.
+            </p>
+
+          </article>
+
+
+          <article class="credential">
+
+            <h3>
+              BE — Information Science and Engineering
+            </h3>
+
+            <p>
+              Rajarajeswari College of Engineering
+              <br>
+              June 2023
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="contact-box">
+
+          <div class="section-label">
+            Contact
+          </div>
+
+          <h2>
+            Let's build reliable systems.
+          </h2>
+
+          <p>
+            I am open to Cloud Support Engineer, Systems Engineer,
+            Sysadmin, Cloud Infrastructure, Junior DevOps and
+            Platform Engineering opportunities.
+          </p>
+
+
+          <div class="buttons contact-links">
+
+            <a
+              class="button button-primary"
+              href="mailto:nidhikshashetty@gmail.com"
+            >
+              Email Me
+            </a>
+
+            <a
+              class="button"
+              href="Nidhiksha_A_Resume.pdf"
+              download
+            >
+              Download Resume
+            </a>
+
+            <a
+              class="button"
+              href="https://www.linkedin.com/in/nidhiksha-a-991a53220/"
+              target="_blank"
+              rel="noopener"
+            >
+              LinkedIn
+            </a>
+
+            <a
+              class="button"
+              href="https://github.com/nidhiksha-ananth"
+              target="_blank"
+              rel="noopener"
+            >
+              GitHub
+            </a>
+
+            <a
+              class="button"
+              href="tel:+919916522338"
+            >
+              +91 99165 22338
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <span>
+        NIDHIKSHA A · Cloud & Systems Engineering
+      </span>
+
+      <span>
+        © 2026 Nidhiksha A
+      </span>
+
+    </div>
+
+  </footer>
+
 </body>
 </html>
