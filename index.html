@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cloud & DevOps Portfolio</title>
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#f6f8fb,#0b1220);--surface:light-dark(#fff,#111827);--text:light-dark(#111827,#f3f4f6);--muted:light-dark(#5b6472,#aab3c2);--line:light-dark(#e3e8ef,#263244);--accent:light-dark(#2563eb,#60a5fa);--chip:light-dark(#eef4ff,#172554)}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.root{min-height:100vh;background:var(--bg)}
+.wrap{max-width:1050px;margin:auto;padding:28px 22px 70px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:72px}
+.brand{font-weight:800;letter-spacing:.04em}
+.links a{color:var(--muted);text-decoration:none;margin-left:22px;font-size:.92rem}
+.hero{display:grid;grid-template-columns:1.4fr .8fr;gap:45px;align-items:center;margin-bottom:95px}
+.eyebrow{color:var(--accent);font-weight:750;letter-spacing:.12em;text-transform:uppercase;font-size:.8rem}
+.hero h1{font-size:clamp(2.6rem,6vw,5.3rem);line-height:.98;margin:14px 0 22px;letter-spacing:-.055em}
+.hero h1 span{color:var(--accent)}
+.lead{font-size:1.15rem;color:var(--muted);max-width:680px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:700;border:1px solid var(--line);color:var(--text)}
+.primary{background:var(--accent);color:white;border-color:var(--accent)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px}
+.stat{padding:16px 0;border-bottom:1px solid var(--line)}
+.stat:last-child{border:0}
+.stat b{display:block;font-size:1.35rem}
+.stat small{color:var(--muted)}
+section{margin:80px 0}
+h2{font-size:2rem;letter-spacing:-.03em;margin:0 0 25px}
+.section-intro{color:var(--muted);max-width:700px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px}
+.card h3{margin:0 0 8px;font-size:1.2rem}
+.card p{color:var(--muted);margin:8px 0 16px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:var(--chip);color:var(--text);padding:5px 9px;border-radius:999px;font-size:.78rem}
+.timeline{border-left:2px solid var(--line);padding-left:24px}
+.timeline h3{margin-bottom:3px}
+.timeline p{color:var(--muted)}
+.footer{border-top:1px solid var(--line);padding-top:28px;color:var(--muted);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:760px){
+.hero{grid-template-columns:1fr;margin-bottom:65px}
+.grid{grid-template-columns:1fr}
+.nav{margin-bottom:45px}
+.links a{margin-left:10px}
+.links a:nth-child(1){display:none}
+}
+</style>
+</head>
+
+<body>
+<div class="root">
+<main class="wrap">
+
+<nav class="nav">
+<div class="brand">CLOUD / DEVOPS</div>
+<div class="links">
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<div class="eyebrow">IT Support → Cloud Infrastructure & DevOps</div>
+<h1>Building reliable <span>AWS</span> infrastructure.</h1>
+<p class="lead">IT Support Engineer with 3 years of enterprise production-support experience, now building hands-on AWS, Kubernetes, Terraform, CI/CD and GitOps solutions.</p>
+
+<div class="buttons">
+<a class="btn primary" href="https://github.com/nidhiksha-ananth" target="_blank">GitHub</a>
+<a class="btn" href="https://www.linkedin.com/in/nidhiksha-a-991a53220/" target="_blank">LinkedIn</a>
+</div>
+</div>
+
+<div class="panel">
+<div class="stat"><b>3 years</b><small>Enterprise production support</small></div>
+<div class="stat"><b>AZ-104</b><small>Azure Administrator Associate</small></div>
+<div class="stat"><b>54%</b><small>Daily runtime reduction in cost project</small></div>
+<div class="stat"><b>AWS + EKS</b><small>Hands-on cloud & DevOps projects</small></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Featured projects</h2>
+<p class="section-intro">Projects focused on infrastructure automation, deployment reliability, high availability and operational efficiency.</p>
+
+<div class="grid">
+
+<article class="card">
+<h3>Self-Healing GitOps Platform on AWS EKS</h3>
+<p>Built a production-style Kubernetes platform with Terraform, GitHub Actions and ArgoCD. Added container security scanning, autoscaling, observability and automated recovery. Tested Git drift correction and pod recovery.</p>
+
+<div class="chips">
+<span class="chip">AWS EKS</span>
+<span class="chip">Terraform</span>
+<span class="chip">ArgoCD</span>
+<span class="chip">GitHub Actions</span>
+<span class="chip">Prometheus</span>
+<span class="chip">Grafana</span>
+</div>
+
+<p><a href="https://github.com/nidhiksha-ananth/self-healing-gitops-eks-platform" target="_blank">View repository →</a></p>
+</article>
+
+<article class="card">
+<h3>Highly Available AWS Infrastructure</h3>
+<p>Designed multi-AZ AWS infrastructure with modular Terraform: VPC, public/private subnets, NAT Gateways, ALB, EC2 Auto Scaling and PostgreSQL RDS. Used GitHub OIDC and separate IAM roles for secure CI/CD.</p>
+
+<div class="chips">
+<span class="chip">AWS</span>
+<span class="chip">Terraform</span>
+<span class="chip">VPC</span>
+<span class="chip">ALB</span>
+<span class="chip">Auto Scaling</span>
+<span class="chip">RDS</span>
+</div>
+
+<p><a href="https://github.com/nidhiksha-ananth/highly-available-aws-infrastructure" target="_blank">View repository →</a></p>
+</article>
+
+<article class="card">
+<h3>EC2 Cost Optimization</h3>
+<p>Built an automation solution for opted-in non-production EC2 instances that reduced daily running hours by 54%, demonstrating practical cloud cost-management thinking.</p>
+
+<div class="chips">
+<span class="chip">AWS</span>
+<span class="chip">EC2</span>
+<span class="chip">Automation</span>
+<span class="chip">Cost Optimization</span>
+</div>
+
+<p><a href="https://github.com/nidhiksha-ananth/aws-cost-optimizer" target="_blank">View repository →</a></p>
+</article>
+
+</div>
+</section>
+
+<section id="skills">
+<h2>Technical toolkit</h2>
+
+<div class="chips">
+<span class="chip">AWS</span>
+<span class="chip">Kubernetes</span>
+<span class="chip">Terraform</span>
+<span class="chip">EKS</span>
+<span class="chip">EC2</span>
+<span class="chip">VPC</span>
+<span class="chip">IAM</span>
+<span class="chip">RDS</span>
+<span class="chip">ALB</span>
+<span class="chip">CloudWatch</span>
+<span class="chip">Docker</span>
+<span class="chip">GitHub Actions</span>
+<span class="chip">ArgoCD</span>
+<span class="chip">GitOps</span>
+<span class="chip">CI/CD</span>
+<span class="chip">Prometheus</span>
+<span class="chip">Grafana</span>
+<span class="chip">Linux</span>
+<span class="chip">Bash</span>
+<span class="chip">Python</span>
+<span class="chip">Networking</span>
+<span class="chip">Production Support</span>
+<span class="chip">ServiceNow</span>
+<span class="chip">Active Directory</span>
+</div>
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="timeline">
+<h3>Service Desk Support · NTT DATA</h3>
+<p>3 years · Enterprise production support</p>
+
+<p>Handled P1/P2 incidents, TCP/IP, DNS, VPN and application connectivity troubleshooting, Active Directory and access issues, and Azure identity/access processes including Temporary Access Pass and Microsoft Authenticator setup. Collaborated with infrastructure, network, cloud, application and security teams while documenting incidents and supporting root-cause analysis.</p>
+</div>
+</section>
+
+<section>
+<h2>Certifications & direction</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Microsoft Certified: Azure Administrator Associate</h3>
+<p>AZ-104</p>
+<p><a href="https://learn.microsoft.com/en-us/users/nidhikshaa-9058/credentials/certification/azure-administrator?tab=credentials-tab&source=docs" target="_blank">View credential →</a></p>
+</div>
+
+<div class="card">
+<h3>AWS Solutions Architect – Associate</h3>
+<p>Currently preparing for SAA-C03</p>
+</div>
+
+</div>
+
+<p class="section-intro" style="margin-top:20px">Open to Cloud Support Engineer, AWS Cloud Engineer, Cloud Infrastructure Engineer, Junior DevOps and Platform Engineering opportunities.</p>
+</section>
+
+<footer class="footer">
+<span>Built around cloud infrastructure, automation and reliability.</span>
+<span>© 2026 Cloud / DevOps Portfolio</span>
+</footer>
+
+</main>
+</div>
+</body>
+</html>
